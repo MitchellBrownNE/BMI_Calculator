@@ -45,10 +45,11 @@ int main()
     //Greeting prompt
     std::cout << "Hello, Welcome to the BMI calculator\n\n";
 
-    
+    //User Input for first weight
     std::cout << "Please input weight in kilograms of first twin(Height will be set to 1.8m): ";
     std::cin >> W1;
     
+    //User input for second weight and height(in feet)
     std::cout << "Please input weight of second twin: ";
     std::cin >> W2;
     std::cout << "Please input height of second twin in feet:";
@@ -62,7 +63,8 @@ int main()
 
     //Swapping weights
     swap(&W1, &W2);
-
+       
+    //Calling BMIcaluculator function after swap and outputting its values
     BMI_Index1 = BMIcalculator(W1);
     BMI_Index2 = BMIcalculator(W2, conversionMeters(H));
     std::cout << "\nBMI after swapping weights\n";
